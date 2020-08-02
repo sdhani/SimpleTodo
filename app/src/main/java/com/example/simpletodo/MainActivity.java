@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
         etItem = findViewById(R.id.etItem);
         rvItems = findViewById(R.id.rvItems);
 
-        etItem.setText("I'm doing jumping Jacks");
-
         loadItems();
 
         ItemsAdapter.OnLongClickListener onLongClickListener = new ItemsAdapter.OnLongClickListener() {
@@ -50,10 +48,18 @@ public class MainActivity extends AppCompatActivity {
                 itemsAdapter.notifyItemRemoved(position);
                 Toast.makeText(getApplicationContext(), "Item was removed", Toast.LENGTH_SHORT).show();
                 saveItems();
+                Log.e("MainActivity", "Long click at position " + position);
             }
         };
 
-        final ItemsAdapter itemsAdapter =  new ItemsAdapter(items, onLongClickListener);
+        ItemsAdapter.OnClickListener onClickListener =  new ItemsAdapter.OnClickListener() {
+            @Override
+            public void onItemClicked(int position) {
+                Log.e("MainActivity", "Single click at position " + position);
+            }
+        };
+
+        itemsAdapter =  new ItemsAdapter(items, onLongClickListener, onClickListener);
         rvItems.setAdapter(itemsAdapter);
         rvItems.setLayoutManager(new LinearLayoutManager(this));
 
