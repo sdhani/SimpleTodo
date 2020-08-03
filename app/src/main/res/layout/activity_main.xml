@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/add-btn"
         android:layout_width="wrap_content"
@@ -15,7 +16,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:text="Add" />
+        android:text="Add"
+        android:background="#FFEBEE"
+        />
 
     <EditText
         android:id="@+id/etItem"
@@ -28,7 +31,10 @@
         android:layout_marginBottom="0dp"
         android:layout_toStartOf="@+id/add-btn"
         android:ems="10"
-        android:hint="Add an item here :D" />
+        android:hint="Add an item here :D"
+        android:background="#EF9A9A"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvItems"
@@ -39,5 +45,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp" />
+        android:layout_marginBottom="0dp"
+        android:background="#FFCDD2"
+        android:layout_centerVertical="true"
+        />
+
 </RelativeLayout>

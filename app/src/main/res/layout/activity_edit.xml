@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditActivity">
+    tools:context=".EditActivity"
+    android:background="#FFCDD2">
 
     <EditText
         android:id="@+id/editText"
@@ -15,7 +16,10 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:ems="10"
-        android:hint="Update the Item" />
+        android:hint="Update the Item"
+        android:background="#EF9A9A"
+        android:padding="12dp"
+        />
 
     <Button
         android:id="@+id/btnSave"
@@ -25,5 +29,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
-        android:text="Save" />
+        android:text="Save"
+        android:background="#FFEBEE" />
+
 </RelativeLayout>
