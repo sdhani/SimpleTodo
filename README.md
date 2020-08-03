@@ -20,7 +20,7 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-# ![demo](https://github.com/sdhani/SimpleTodo/blob/master/simpletodo.gif)
+# <img src="https://github.com/sdhani/SimpleTodo/blob/master/simpletodo.gif" width="300px" height="auto"/> 
 
 ## License
 
